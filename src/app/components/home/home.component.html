@@ -1,0 +1,9 @@
+<section>
+    <form>
+      <input #filter type="text" placeholder="Filter by city" style="border:solid">    
+      <button style="background-color:rgb(232, 34, 176)" type="button" class="primary" (click)="filterResults(filter.value)">Search</button> 
+    </form>
+    <section class="results">
+        <app-housing-location *ngFor="let housingLocation of filteredLocationList" [housingLocation]="housingLocation"></app-housing-location>
+    </section>
+  </section>
